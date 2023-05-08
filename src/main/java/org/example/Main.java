@@ -3,21 +3,21 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         Exceptions c = new Exceptions();
+
         c.nullPointerException();
         c.classCastException();
         c.arrayIndexOutOfBoundsException();
 
-        Integer[] test = {1, 2, 3, 4};
-        Integer[] test1 = {4, 25, 3, 4, 7};
 
-        Integer[] res = c.sumOfArrays(test1, test);
-        c.Print(res);
+        Integer[] test = {1, 2, 3, 4, 7};
+        Integer[] test1 = {4, 25, 3, 4};
+        c.Print(c.sumOfArrays(test1, test));
     }
 }
 
 
 class Exceptions {
-    public void classCastException()
+    public void classCastException() // Первое задание
     {
         try {
             Object n = new String("123");
@@ -27,7 +27,7 @@ class Exceptions {
         }
     }
 
-    public void arrayIndexOutOfBoundsException()
+    public void arrayIndexOutOfBoundsException() // Второе задание
     {
         String[] list = new String[3];
         String a = "123";
@@ -38,7 +38,7 @@ class Exceptions {
         }
     }
 
-    public void nullPointerException()
+    public void nullPointerException() // Третье задагние
     {
         String d = null;
         try {
@@ -48,7 +48,7 @@ class Exceptions {
         }
     }
 
-    public Integer[] sumOfArrays(Integer[] a, Integer[] b)
+    public Integer[] sumOfArrays(Integer[] a, Integer[] b) // Четвертое задание
     {
         Integer[] result = new Integer[a.length];
 
@@ -59,6 +59,7 @@ class Exceptions {
                 }
             }
             return result;
+
     }
 
     public void Print(Integer[] a)
